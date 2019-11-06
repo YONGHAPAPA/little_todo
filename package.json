@@ -1,0 +1,19 @@
+{
+  "name": "little_todo",
+  "version": "1.0.0",
+  "description": "prototype project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YONGHAPAPA/little_todo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YONGHAPAPA/little_todo/issues"
+  },
+  "homepage": "https://github.com/YONGHAPAPA/little_todo#readme"
+}
