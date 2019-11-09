@@ -4,7 +4,7 @@ import {BrowserRouter as Router, Route, Link} from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css"
 import CreateTodo from "./component/create-todo.component";
 import EditTodo from "./component/edit-todo.component";
-import TodoList from "./component/edit-todo.component";
+import TodoList from "./component/todos-list.component";
 
 import logo from "./logo.png";
 
