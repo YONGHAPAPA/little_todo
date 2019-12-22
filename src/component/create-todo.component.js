@@ -67,6 +67,51 @@ export default class CreateToDo extends Component {
     }
 
 
+    onClick_CreateSession(){
+        console.log("onClick_CreateSession");
+
+        const postdata = {
+            method:"POST", 
+            headers:{
+                'Accept':'application/json', 
+                'Content-Type':'application/json', 
+                'Cache':'no-cache'
+            }, 
+            credentials:'include', 
+            body:JSON.stringify({name:'test', email:'test@gmail.com'})
+        }
+
+        //axios.get('http://localhost:4000/todos/createsession', {name:'test', email:'test@gmail.com'}).then(res => console.log(res.data));
+        fetch('http://localhost:4000/todos/createsession', postdata).then((res) => res.json()).then((resJson) => {
+            console.log(resJson);
+        }).catch(err => {
+            console.log(err);
+        })
+    }
+
+    onClick_CheckSession(){
+        console.log("onClick_CheckSession");
+
+        const header = {
+            method:"POST", 
+            headers:{
+                'Accept':'application/json', 
+                'Content-Type':'application/json', 
+                'Cache':'no-cache'
+            }, 
+            credentials:'include'
+        }
+
+        //axios.get('http://localhost:4000/todos/checksession').then(res => console.log(res.data));
+
+        fetch('http://localhost:4000/todos/checksession', header).then((res) => res.json()).then((resJson) => {
+            console.log(JSON.stringify(resJson));
+        }).catch(err => {
+            console.log(err);
+        })
+    }
+
+
 
     render(){
         return(
@@ -118,6 +163,9 @@ export default class CreateToDo extends Component {
                     </div>
                     <div className="form-group">
                         <input type="submit" value="Create Todo" className="btn btn-primary" />
+
+                        <input type="button" value="create session" className="btn btn-primary" onClick={this.onClick_CreateSession} />
+                        <input type="button" value="check session" className="btn btn-primary" onClick={this.onClick_CheckSession} />
                     </div>
                 </form>
             </div>
